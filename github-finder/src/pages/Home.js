@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { styled } from 'styled-components';
 import RowComponent from '../components/Row/Row';
 import ColumnComponent from '../components/Column/Column';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
   const [username, setUsername] = useState('');
@@ -65,6 +66,9 @@ const Button = styled.button`
 
   return (
     <Wrapper>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <form onSubmit={handleSubmit}>
         <ColumnComponent backgroundColor='white'>
           <RowComponent justifyContent='center'> 
